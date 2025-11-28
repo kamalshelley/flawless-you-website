@@ -459,6 +459,8 @@
                         <label for="contact-message" class="text-xs font-semibold text-brand-dark mb-1">Tell us your vision</label>
                         <textarea id="contact-message" name="message" rows="3" class="w-full bg-white border border-gray-200 p-4 outline-none focus:border-brand-teal transition-colors font-medium" placeholder="Describe your desired look or any questions"></textarea>
                     </div>
+                    <!-- Disable FormSubmit captcha to avoid extra step for users -->
+                    <input type="hidden" name="_captcha" value="false">
                     <button class="w-full py-4 bg-brand-dark text-white uppercase tracking-widest text-sm font-bold hover:bg-brand-teal transition-colors magnetic-btn">Send Inquiry</button>
                 </form>
 
@@ -551,38 +553,50 @@
         });
 
         // --- 6. CONTACT FORM SUBMISSION ---
-        // When the user submits the enquiry form, build a WhatsApp link to send
-        // the enquiry details directly via WhatsApp to the business number.
-        // The link is opened in a new tab/window so the current site remains open.
-        // A confirmation message is also shown on the page after submission.
+        // When the user submits the enquiry form, send the details via FormSubmit to
+        // the site owner's email without opening the user's email application. A
+        // confirmation message is displayed on the page upon success.
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
-            // Element for confirmation feedback
             const confirmation = document.createElement('p');
             confirmation.className = 'mt-4 text-brand-teal font-semibold';
             confirmation.style.display = 'none';
             contactForm.parentNode.appendChild(confirmation);
-            contactForm.addEventListener('submit', (e) => {
+            contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 // Collect values from the form
                 const name = document.getElementById('contact-name').value.trim();
                 const date = document.getElementById('contact-date').value.trim();
                 const emailAddress = document.getElementById('contact-email').value.trim();
                 const message = document.getElementById('contact-message').value.trim();
-                // Construct the WhatsApp message text
-                let waText = 'New enquiry from Flawless You website.%0A%0A';
-                if (name) waText += `Name: ${name}%0A`;
-                if (date) waText += `Event Date: ${date}%0A`;
-                if (emailAddress) waText += `Email: ${emailAddress}%0A`;
-                if (message) waText += `Message: ${message}%0A`;
-                // Encode and open the WhatsApp API link in a new tab
-                const whatsappUrl = `https://wa.me/447771447915?text=${encodeURIComponent(waText)}`;
-                window.open(whatsappUrl, '_blank');
-                // Show a confirmation message to the user without leaving the page
-                confirmation.textContent = 'Thank you for your enquiry! We have received your message and will be in touch shortly.';
-                confirmation.style.display = 'block';
-                // Clear the form fields
-                contactForm.reset();
+                // Build JSON payload for FormSubmit
+                const payload = {
+                    name: name,
+                    date: date,
+                    email: emailAddress,
+                    message: message
+                };
+                try {
+                    const response = await fetch('https://formsubmit.co/ajax/pavarnamakeover@gmail.com', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+                    if (response.ok) {
+                        confirmation.textContent = 'Thank you for your enquiry! We have received your details and will respond shortly.';
+                        confirmation.style.display = 'block';
+                        contactForm.reset();
+                    } else {
+                        confirmation.textContent = 'Sorry, something went wrong. Please try again later.';
+                        confirmation.style.display = 'block';
+                    }
+                } catch (error) {
+                    confirmation.textContent = 'An error occurred while sending your enquiry. Please try again later.';
+                    confirmation.style.display = 'block';
+                }
             });
         }
     </script>
