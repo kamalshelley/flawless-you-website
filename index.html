@@ -624,21 +624,30 @@
         }
 
         // --- 7. FUTURISTIC SCROLL ANIMATIONS ---
-        // Register the ScrollTrigger plugin and animate sections into view for a futuristic feel.
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.utils.toArray('.section-fade').forEach(section => {
-            gsap.from(section, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    toggleActions: 'play none none reverse'
-                }
-            });
-        });
+        // Animate sections into view only if the GSAP ScrollTrigger plugin is available.  This
+        // conditional prevents runtime errors that can break the page and ensures that
+        // sections remain visible even if the animation script fails to load.  By
+        // default, all sections use opacity:1 so they are displayed immediately.
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            try {
+                gsap.registerPlugin(ScrollTrigger);
+                gsap.utils.toArray('.section-fade').forEach(section => {
+                    gsap.from(section, {
+                        opacity: 0,
+                        y: 50,
+                        duration: 1,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top 80%',
+                            toggleActions: 'play none none reverse'
+                        }
+                    });
+                });
+            } catch (e) {
+                console.warn('ScrollTrigger animations disabled:', e);
+            }
+        }
     </script>
 </body>
 </html>
