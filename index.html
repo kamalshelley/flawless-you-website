@@ -241,6 +241,87 @@
     </section>
 
     <!-- NEW SECTION: Premium Gallery -->
+    <!-- Immersive Service Menu (Curated Experiences) moved above the gallery -->
+    <section id="services" class="section-fade py-32 bg-white relative overflow-hidden">
+        <!-- Background Layers including new experiences -->
+        <div class="service-bg-layer" id="bg-bridal" style="background-image: url('https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="service-bg-layer" id="bg-party" style="background-image: url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="service-bg-layer" id="bg-editorial" style="background-image: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
+        <!-- New background layers referencing uploaded images for specialised services -->
+        <div class="service-bg-layer" id="bg-prepleat" style="background-image: url('6882C705-B3F4-4AF0-ADE8-B8966F15E5E4.jpeg')"></div>
+        <div class="service-bg-layer" id="bg-draping" style="background-image: url('06A1C497-1644-4594-B5DC-B7F55DB06C53.jpeg')"></div>
+        <div class="service-bg-layer" id="bg-hairstyle" style="background-image: url('D55304D8-5458-46E7-89A3-5A274F0BBF08.jpeg')"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20">
+            <div>
+                <h2 class="font-display text-5xl md:text-7xl text-brand-dark mb-8 leading-tight">Curated<br><span class="italic text-brand-teal">Experiences</span></h2>
+                <p class="text-gray-600 mb-12 font-medium max-w-md">
+                    Hover over a service to explore the mood. Every package is tailored to your unique features and style preferences.
+                </p>
+                <a href="#contact" class="magnetic-btn inline-block px-8 py-3 border border-brand-dark text-brand-dark uppercase tracking-widest text-xs font-bold hover:bg-brand-dark hover:text-white transition-colors">Get a Quote</a>
+            </div>
+
+            <!-- Service list expanded with new offerings -->
+            <div class="space-y-2">
+                <!-- Existing services -->
+                <div class="service-item border-b border-gray-300 py-8 cursor-pointer hover-trigger group" data-bg="bg-bridal">
+                    <div class="flex justify-between items-end mb-2">
+                        <h3 class="font-serif text-3xl text-gray-400 group-hover:text-brand-teal transition-colors duration-300">01. Bridal Artistry</h3>
+                        <i class="fas fa-arrow-right text-transparent group-hover:text-brand-teal transition-all duration-300 -translate-x-4 group-hover:translate-x-0"></i>
+                    </div>
+                    <p class="text-sm text-gray-500 max-w-md opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-300 overflow-hidden">
+                        Comprehensive consultation, draping, and premium HD makeup for your big day.
+                    </p>
+                </div>
+                <div class="service-item border-b border-gray-300 py-8 cursor-pointer hover-trigger group" data-bg="bg-party">
+                    <div class="flex justify-between items-end mb-2">
+                        <h3 class="font-serif text-3xl text-gray-400 group-hover:text-brand-teal transition-colors duration-300">02. Party &amp; Occasion</h3>
+                        <i class="fas fa-arrow-right text-transparent group-hover:text-brand-teal transition-all duration-300 -translate-x-4 group-hover:translate-x-0"></i>
+                    </div>
+                    <p class="text-sm text-gray-500 max-w-md opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-300 overflow-hidden">
+                        Glamorous looks for bridesmaids, guests, and red carpet events.
+                    </p>
+                </div>
+                <div class="service-item border-b border-gray-300 py-8 cursor-pointer hover-trigger group" data-bg="bg-editorial">
+                    <div class="flex justify-between items-end mb-2">
+                        <h3 class="font-serif text-3xl text-gray-400 group-hover:text-brand-teal transition-colors duration-300">03. Editorial</h3>
+                        <i class="fas fa-arrow-right text-transparent group-hover:text-brand-teal transition-all duration-300 -translate-x-4 group-hover:translate-x-0"></i>
+                    </div>
+                    <p class="text-sm text-gray-500 max-w-md opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-300 overflow-hidden">
+                        Creative direction for fashion shoots and modelling portfolios.
+                    </p>
+                </div>
+                <!-- New services -->
+                <div class="service-item border-b border-gray-300 py-8 cursor-pointer hover-trigger group" data-bg="bg-prepleat">
+                    <div class="flex justify-between items-end mb-2">
+                        <h3 class="font-serif text-3xl text-gray-400 group-hover:text-brand-teal transition-colors duration-300">04. Saree Pre‑Pleating</h3>
+                        <i class="fas fa-arrow-right text-transparent group-hover:text-brand-teal transition-all duration-300 -translate-x-4 group-hover:translate-x-0"></i>
+                    </div>
+                    <p class="text-sm text-gray-500 max-w-md opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-300 overflow-hidden">
+                        Expertly pre‑pleated sarees for effortless draping and a flawless silhouette.
+                    </p>
+                </div>
+                <div class="service-item border-b border-gray-300 py-8 cursor-pointer hover-trigger group" data-bg="bg-draping">
+                    <div class="flex justify-between items-end mb-2">
+                        <h3 class="font-serif text-3xl text-gray-400 group-hover:text-brand-teal transition-colors duration-300">05. Saree Draping</h3>
+                        <i class="fas fa-arrow-right text-transparent group-hover:text-brand-teal transition-all duration-300 -translate-x-4 group-hover:translate-x-0"></i>
+                    </div>
+                    <p class="text-sm text-gray-500 max-w-md opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-300 overflow-hidden">
+                        Traditional and contemporary draping styles tailored to accentuate your grace.
+                    </p>
+                </div>
+                <div class="service-item border-b border-gray-300 py-8 cursor-pointer hover-trigger group" data-bg="bg-hairstyle">
+                    <div class="flex justify-between items-end mb-2">
+                        <h3 class="font-serif text-3xl text-gray-400 group-hover:text-brand-teal transition-colors duration-300">06. Hairstyles</h3>
+                        <i class="fas fa-arrow-right text-transparent group-hover:text-brand-teal transition-all duration-300 -translate-x-4 group-hover:translate-x-0"></i>
+                    </div>
+                    <p class="text-sm text-gray-500 max-w-md opacity-0 h-0 group-hover:opacity-100 group-hover:h-auto transition-all duration-300 overflow-hidden">
+                        Stunning hairdos—from elegant updos to modern curls—to complement your look.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="gallery" class="section-fade py-24 bg-brand-light">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
@@ -251,8 +332,8 @@
                 <a href="https://instagram.com/makeoverby_pavarna" target="_blank" class="hidden md:inline-block border-b border-brand-dark pb-1 text-xs uppercase tracking-widest hover:text-brand-teal hover:border-brand-teal transition-colors">Follow on Instagram</a>
             </div>
 
-            <!-- Masonry Grid Layout -->
-            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            <!-- Masonry Grid Layout (hidden to enable carousel) -->
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 hidden">
                 <!-- Custom gallery showcasing Pavarna's work -->
                 <!-- Creative Skull Face Art -->
                 <div class="gallery-item group hover-trigger">
@@ -397,16 +478,82 @@
                         <h3 class="text-white font-serif text-2xl italic">Bride's Poise</h3>
                     </div>
                 </div>
-            </div>
-            
+                </div>
+
+                <!-- Carousel Layout for Curated Moments -->
+                <div id="gallery-carousel" class="overflow-hidden relative mt-8">
+                    <div id="carousel-track" class="flex transition-transform duration-700">
+                        <!-- Slide 1 -->
+                        <div class="min-w-full">
+                            <img src="AEB3BFEF-DDB3-409F-8053-F41CB6DEE610.jpeg" alt="Creative skull face art makeup with colourful design" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="min-w-full">
+                            <img src="6882C705-B3F4-4AF0-ADE8-B8966F15E5E4.jpeg" alt="Bridal look with red saree and golden embroidery" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="min-w-full">
+                            <img src="1E07C304-563F-4955-9514-FB370FE6CA32.jpeg" alt="Elegant makeup with tiara and flowers in hands" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="min-w-full">
+                            <img src="06A1C497-1644-4594-B5DC-B7F55DB06C53.jpeg" alt="Traditional look with blue saree and gold jewellery" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="min-w-full">
+                            <img src="F4E41AC3-6481-4EC0-9529-C4FBDAD8A0C3.jpeg" alt="Colourful artistic eye makeup with vibrant hues" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="min-w-full">
+                            <img src="1E7CC063-F3F1-45D8-8B36-C41F5DD8D759.jpeg" alt="Traditional look with ornate accessories and purple attire" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="min-w-full">
+                            <img src="C09CCFC0-F681-4D95-8C8A-3145EEEE95C5.jpeg" alt="Bridal hair styling with accessories and flowers" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="min-w-full">
+                            <img src="11CB1188-6E0A-449E-AE5C-92DBD5FC00C6.jpeg" alt="Makeup look with dark smokey eye and red lips" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 9 -->
+                        <div class="min-w-full">
+                            <img src="D55304D8-5458-46E7-89A3-5A274F0BBF08.jpeg" alt="Editorial portrait with pink background and embellished eye makeup" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 10 -->
+                        <div class="min-w-full">
+                            <img src="B70386A5-C385-440E-A151-223B10793CAB.jpeg" alt="Traditional updo and jewellery in blue saree" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 11 -->
+                        <div class="min-w-full">
+                            <img src="556D14C9-C7C2-4CEB-ABDC-3FD0C5C76861.jpeg" alt="Bridal profile with rich jewellery and red nails" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 12 -->
+                        <div class="min-w-full">
+                            <img src="ACAC1E63-FDBD-48C7-81F9-4179F65AA4D7.jpeg" alt="Half face portrait in vibrant colours" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 13 -->
+                        <div class="min-w-full">
+                            <img src="58A05FB8-5718-49FC-B817-2DB8CB165375.jpeg" alt="Overhead shot of a bride in an ornate red lehenga" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 14 -->
+                        <div class="min-w-full">
+                            <img src="436E072F-FA9B-4A65-9BBB-326C0E0F0CF1.jpeg" alt="Bride wearing a cream and blue sari with gold jewellery standing outdoors" class="w-full h-auto object-cover" />
+                        </div>
+                        <!-- Slide 15 -->
+                        <div class="min-w-full">
+                            <img src="D1C13B78-325E-4744-ADB9-A5D223690F3A.jpeg" alt="Full length seated portrait of a bride in a blue sari with arms adorned in bangles" class="w-full h-auto object-cover" />
+                        </div>
+                    </div>
+                </div>
+
             <div class="text-center mt-12 md:hidden">
                 <a href="https://instagram.com/makeoverby_pavarna" class="border-b border-brand-dark pb-1 text-xs uppercase tracking-widest">Follow on Instagram</a>
             </div>
         </div>
     </section>
 
-    <!-- Immersive Service Menu -->
-    <section id="services" class="section-fade py-32 bg-white relative overflow-hidden">
+    <!-- Immersive Service Menu (hidden duplicate) -->
+    <section id="services-old" class="hidden section-fade py-32 bg-white relative overflow-hidden">
         <!-- Background Layers -->
         <div class="service-bg-layer" id="bg-bridal" style="background-image: url('https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
         <div class="service-bg-layer" id="bg-party" style="background-image: url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"></div>
@@ -681,6 +828,18 @@
                     confirmation.style.display = 'block';
                 }
             });
+        }
+
+        // --- 7. GALLERY CAROUSEL ---
+        // Automatically cycle through gallery images in the carousel. Each slide occupies full width of the container.
+        const carouselTrackElem = document.getElementById('carousel-track');
+        if (carouselTrackElem) {
+            let currentSlideIndex = 0;
+            const totalSlides = carouselTrackElem.children.length;
+            setInterval(() => {
+                currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+                carouselTrackElem.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            }, 5000);
         }
 
         // --- 8. PERSONALIZED LOOK FINDER ---
